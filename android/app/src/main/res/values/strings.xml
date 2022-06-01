@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Spotter</string>
+    <string name="facebook_app_id">802248250711133</string>
+    <string name="fb_login_protocol_scheme">fb802248250711133</string>
+</resources>

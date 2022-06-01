@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="-1 -1 40 40">
+<defs>
+    <clipPath id="clip-path">
+      <path id="Stroke_1" data-name="Stroke 1" d="M0,15.521A15.52,15.52,0,1,1,15.521,31.042,15.521,15.521,0,0,1,0,15.521Z" fill="none" stroke="#1b1c20" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+    </clipPath>
+  </defs>
+<g id="profile" transform="translate(0 0)">
+        <g id="profile-2" data-name="profile" clip-path="url(#clip-path)">
+          <path id="Stroke_3" data-name="Stroke 3" d="M6.589-.75A7.339,7.339,0,1,1-.75,6.589,7.348,7.348,0,0,1,6.589-.75Zm0,13.179A5.839,5.839,0,1,0,.75,6.589,5.846,5.846,0,0,0,6.589,12.429Z" transform="translate(8.725 4.102)" fill="#1b1c20"/>
+          <path id="Stroke_6" data-name="Stroke 6" d="M15.314-.75A16.065,16.065,0,0,1,26.673,26.674,16.064,16.064,0,0,1,3.955,3.955,15.959,15.959,0,0,1,15.314-.75Zm0,30.629A14.564,14.564,0,1,0,.75,15.314,14.581,14.581,0,0,0,15.314,29.879Z" transform="translate(0 21.134)" fill="#1b1c20"/>
+        </g>
+        <path id="Stroke_1-2" data-name="Stroke 1" d="M15.521-.75a16.046,16.046,0,0,1,9.024,2.757,16.964,16.964,0,0,1,6,7.268,15.8,15.8,0,0,1,1.242,6.246A16.27,16.27,0,0,1,4.015,27.026,16.271,16.271,0,0,1,15.521-.75Zm0,31.042a14.787,14.787,0,0,0,14.77-14.771,14.268,14.268,0,0,0-1.115-5.642A14.772,14.772,0,1,0,15.521,30.292Z" fill="#1b1c20"/>
+      </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+
+<g id="navigation-menu" transform="translate(0 5)" >
+        <path id="Path-2" data-name="Path" d="M25.194,1.25H0A.75.75,0,0,1-.75.5.75.75,0,0,1,0-.25H25.194a.75.75,0,0,1,0,1.5Z" transform="translate(0 15.004)" fill="#1b1c20"/>
+        <path id="Path-3" data-name="Path" d="M25.194,1.25H0A.75.75,0,0,1-.75.5.75.75,0,0,1,0-.25H25.194a.75.75,0,0,1,0,1.5Z" transform="translate(0 7.252)" fill="#1b1c20"/>
+        <path id="Path-4" data-name="Path" d="M25.194,1.25H0A.75.75,0,0,1-.75.5.75.75,0,0,1,0-.25H25.194a.75.75,0,0,1,0,1.5Z" transform="translate(0 -0.5)" fill="#1b1c20"/>
+      </g>
+</svg>

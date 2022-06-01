@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "1057981177569",
+    "project_id": "spotter-392fa",
+    "storage_bucket": "spotter-392fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057981177569:android:3bd5d9824eb1b201a1e1a0",
+        "android_client_info": {
+          "package_name": "com.camsilu.spotter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057981177569-0nv4j6etrchgfm2q3k5sdkimnjfdklde.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.camsilu.spotter",
+            "certificate_hash": "0a9e3e6cb341c00c272857fe8cc6e0e0cf29da7c"
+          }
+        },
+        {
+          "client_id": "1057981177569-ar0j1l6k9tk8og55rsa9scpk0b1deagk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.camsilu.spotter",
+            "certificate_hash": "ee79b39fca1cc334e09e363069c0267b94ddb538"
+          }
+        },
+        {
+          "client_id": "1057981177569-iopsk3ffsb1aj315619gnph50n8uqgl0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.camsilu.spotter",
+            "certificate_hash": "5be3792297c43e69b71b9ffeeaaf93f97eaf3c14"
+          }
+        },
+        {
+          "client_id": "1057981177569-fu13gu3lki71arq0uetke521eo4jmhlg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEVP-hwO1hhUkg9QS2Yzj30013U8xDBQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057981177569-fu13gu3lki71arq0uetke521eo4jmhlg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1057981177569-jrmphbo7kj3n6bkulifli2nfg890dtf6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.spotter.spotterapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057981177569:android:0a555f9c30cff28da1e1a0",
+        "android_client_info": {
+          "package_name": "com.spotter.spotterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057981177569-qo53s2rms9htshsiss8phugh9et2nias.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.spotter.spotterapp",
+            "certificate_hash": "ee79b39fca1cc334e09e363069c0267b94ddb538"
+          }
+        },
+        {
+          "client_id": "1057981177569-fu13gu3lki71arq0uetke521eo4jmhlg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEVP-hwO1hhUkg9QS2Yzj30013U8xDBQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057981177569-fu13gu3lki71arq0uetke521eo4jmhlg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1057981177569-jrmphbo7kj3n6bkulifli2nfg890dtf6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.spotter.spotterapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

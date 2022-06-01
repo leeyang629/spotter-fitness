@@ -1,0 +1,36 @@
+{
+  "name": "Genertic Gym",
+  "address": "140 George St, The Rocks NSW 2000, Australia",
+  "images": [
+    "https://api.time.com/wp-content/uploads/2020/03/gym-coronavirus.jpg",
+    "https://images.theconversation.com/files/339674/original/file-20200604-130929-iutdtd.jpg?ixlib=rb-1.1.0&rect=8%2C0%2C5455%2C3637&q=45&auto=format&w=496&fit=clip",
+    "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Z3ltfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80",
+    "https://post.healthline.com/wp-content/uploads/2020/09/4489-gym_people_exercise-1296x728-header-1200x628.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNxGLJNyLtQiJ0HDHEjUoZi2NGdimKEZ8snw&usqp=CAU"
+  ],
+  "location": {
+    "lat": -33.8599358,
+    "lng": 151.2090295
+  },
+  "equipments": [
+    "Sauna",
+    "Cardio Machine",
+    "Resistance Machine",
+    "Towels"
+  ],
+  "amenities": [
+    "Shower Room",
+    "Changing Rooms"
+  ],
+  "partner_benefits": [
+    "30 Day Trial Period",
+    "$50 off on Annual Memberships"
+  ],
+  "distance": "9.8",
+  "opening_hours": {
+    "open_now": false,
+    "weekday_text": [
+    ]
+  },
+  "rating": 4.3
+}

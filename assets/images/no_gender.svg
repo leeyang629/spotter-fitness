@@ -1,0 +1,129 @@
+<svg width="165" height="164" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xml:space="preserve">
+ <g>
+  <title>Layer 1</title>
+  <g transform="matrix(1, 0, 0, 1, -124, -554)" id="svg_1" xmlns="http://www.w3.org/2000/svg">
+   <g id="svg_2">
+    <defs>
+     <rect id="SVGID_1114_" width="428" height="926"/>
+    </defs>
+    <clipPath id="SVGID_26_">
+     <use xlink:href="#SVGID_1114_" id="svg_3" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </clipPath>
+    <g class="st11" clip-path="url(#SVGID_26_)" id="svg_4">
+     <defs>
+      <rect id="SVGID_1116_" width="428" height="926"/>
+     </defs>
+     <clipPath id="SVGID_28_">
+      <use xlink:href="#SVGID_1116_" id="svg_5" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     </clipPath>
+     <g clip-path="url(#SVGID_28_)" id="svg_6">
+      <g id="svg_7">
+       <defs>
+        <rect id="SVGID_1118_" width="428" height="926"/>
+       </defs>
+       <clipPath id="SVGID_30_">
+        <use xlink:href="#SVGID_1118_" id="svg_8" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+       </clipPath>
+       <g class="st13" clip-path="url(#SVGID_30_)" id="svg_9">
+        <defs>
+         <circle id="SVGID_1200_" cx="206.2" cy="635.9" r="80.8"/>
+        </defs>
+        <clipPath id="SVGID_112_">
+         <use xlink:href="#SVGID_1200_" id="svg_10" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        </clipPath>
+        <g class="st56" clip-path="url(#SVGID_112_)" id="svg_11">
+         <defs>
+          <rect id="SVGID_1202_" width="428" height="926"/>
+         </defs>
+         <clipPath id="SVGID_114_">
+          <use xlink:href="#SVGID_1202_" id="svg_12" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+         </clipPath>
+         <rect x="124.3" y="554" width="163.7" height="163.7" fill="#FCC40F" clip-path="url(#SVGID_114_)" id="svg_13"/>
+        </g>
+       </g>
+       <g class="st13" clip-path="url(#SVGID_30_)" id="svg_14">
+        <defs>
+         <rect id="SVGID_1204_" width="428" height="926"/>
+        </defs>
+        <clipPath id="SVGID_116_">
+         <use xlink:href="#SVGID_1204_" id="svg_15" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        </clipPath>
+        <path d="m255.3,642c-3.2,26 -26.1,44.9 -52.2,43.3c-26.1,-1.6 -46.5,-23.3 -46.5,-49.4s20.4,-47.8 46.5,-49.4c26.1,-1.6 49,17.4 52.2,43.3c0.6,4 0.6,8.1 0,12.2z" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="3" stroke="#1B1C20" fill="none" clip-path="url(#SVGID_116_)" id="svg_16"/>
+        <circle cx="206.1" cy="635.9" r="17.9" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="3" stroke="#1B1C20" fill="none" clip-path="url(#SVGID_116_)" id="svg_17"/>
+        <circle cx="206.1" cy="636.9" r="5.2" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="3" stroke="#1B1C20" fill="none" clip-path="url(#SVGID_116_)" id="svg_18"/>
+       </g>
+       <g class="st13" clip-path="url(#SVGID_30_)" id="svg_19">
+        <defs>
+         <polygon id="SVGID_1206_" points="199.7,598.8 199.7,598.8 197.4,600.1 197,598.7 199.9,597.2 201.5,597.2 201.5,610.5          199.7,610.5        "/>
+        </defs>
+        <clipPath id="SVGID_118_">
+         <use xlink:href="#SVGID_1206_" id="svg_20" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        </clipPath>
+        <g clip-path="url(#SVGID_118_)" id="svg_21">
+         <defs>
+          <rect id="SVGID_1208_" width="428" height="926"/>
+         </defs>
+         <clipPath id="SVGID_120_">
+          <use xlink:href="#SVGID_1208_" id="svg_22" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+         </clipPath>
+         <rect x="196" y="596.2" width="6.4" height="15.3" fill="#1B1C20" clip-path="url(#SVGID_120_)" id="svg_23"/>
+        </g>
+       </g>
+       <g class="st13" clip-path="url(#SVGID_30_)" id="svg_24">
+        <defs>
+         <path id="SVGID_1210_" d="m207.9,603.9c0,3.5 1.1,5.4 2.7,5.4c1.8,0 2.7,-2.1 2.7,-5.5c0,-3.3 -0.8,-5.4 -2.7,-5.4c-1.5,-0.1 -2.7,1.9 -2.7,5.5l0,0zm7.3,-0.2c0,4.5 -1.7,7 -4.6,7c-2.6,0 -4.4,-2.4 -4.4,-6.8c0,-4.5 1.9,-6.9 4.6,-6.9c2.8,-0.1 4.4,2.4 4.4,6.7z"/>
+        </defs>
+        <clipPath id="SVGID_122_">
+         <use xlink:href="#SVGID_1210_" id="svg_25" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        </clipPath>
+        <g clip-path="url(#SVGID_122_)" id="svg_26">
+         <defs>
+          <rect id="SVGID_1212_" width="428" height="926"/>
+         </defs>
+         <clipPath id="SVGID_124_">
+          <use xlink:href="#SVGID_1212_" id="svg_27" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+         </clipPath>
+         <rect x="205.1" y="595.9" width="11" height="15.7" fill="#1B1C20" clip-path="url(#SVGID_124_)" id="svg_28"/>
+        </g>
+       </g>
+       <g class="st13" clip-path="url(#SVGID_30_)" id="svg_29">
+        <defs>
+         <polygon id="SVGID_1214_" points="199.7,664.3 199.7,664.3 197.4,665.6 197,664.2 199.9,662.6 201.5,662.6 201.5,675.9          199.7,675.9        "/>
+        </defs>
+        <clipPath id="SVGID_126_">
+         <use xlink:href="#SVGID_1214_" id="svg_30" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        </clipPath>
+        <g clip-path="url(#SVGID_126_)" id="svg_31">
+         <defs>
+          <rect id="SVGID_1216_" width="428" height="926"/>
+         </defs>
+         <clipPath id="SVGID_128_">
+          <use xlink:href="#SVGID_1216_" id="svg_32" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+         </clipPath>
+         <rect x="196" y="661.6" width="6.4" height="15.3" fill="#1B1C20" clip-path="url(#SVGID_128_)" id="svg_33"/>
+        </g>
+       </g>
+       <g class="st13" clip-path="url(#SVGID_30_)" id="svg_34">
+        <defs>
+         <path id="SVGID_1218_" d="m207.9,669.3c0,3.5 1.1,5.4 2.7,5.4c1.8,0 2.7,-2.1 2.7,-5.5c0,-3.3 -0.8,-5.4 -2.7,-5.4c-1.5,0 -2.7,1.9 -2.7,5.5l0,0zm7.3,-0.2c0,4.5 -1.7,7 -4.6,7c-2.6,0 -4.4,-2.4 -4.4,-6.8c0,-4.5 1.9,-6.9 4.6,-6.9c2.8,0 4.4,2.5 4.4,6.7z"/>
+        </defs>
+        <clipPath id="SVGID_130_">
+         <use xlink:href="#SVGID_1218_" id="svg_35" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        </clipPath>
+        <g class="st66" clip-path="url(#SVGID_130_)" id="svg_36">
+         <defs>
+          <rect id="SVGID_1220_" width="428" height="926"/>
+         </defs>
+         <clipPath id="SVGID_132_">
+          <use xlink:href="#SVGID_1220_" id="svg_37" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+         </clipPath>
+         <rect x="205.1" y="661.4" width="11" height="15.7" fill="#1B1C20" clip-path="url(#SVGID_132_)" id="svg_38"/>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

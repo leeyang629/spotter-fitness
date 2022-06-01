@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23.332" height="23.332" viewBox="0 0 23.332 23.332">
+    <defs>
+        <linearGradient id="objyqdbzaa" x1=".5" x2=".5" y1=".008" y2=".998" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#e09b3d"/>
+            <stop offset=".3" stop-color="#c74c4d"/>
+            <stop offset=".6" stop-color="#c21975"/>
+            <stop offset="1" stop-color="#7024c4"/>
+        </linearGradient>
+        <linearGradient id="6p8b0bgfyb" y1="-.451" y2="1.462" xlink:href="#objyqdbzaa"/>
+        <linearGradient id="qopgjia6ic" y1="-1.396" y2="6.586" xlink:href="#objyqdbzaa"/>
+    </defs>
+    <path fill="url(#objyqdbzaa)" d="M16.381 0h-9.43A6.959 6.959 0 0 0 0 6.951v9.431a6.959 6.959 0 0 0 6.951 6.951h9.431a6.959 6.959 0 0 0 6.951-6.951V6.951A6.959 6.959 0 0 0 16.381 0zm4.6 16.381a4.6 4.6 0 0 1-4.6 4.6h-9.43a4.6 4.6 0 0 1-4.6-4.6v-9.43a4.6 4.6 0 0 1 4.6-4.6h9.431a4.6 4.6 0 0 1 4.6 4.6v9.431z"/>
+    <path fill="url(#6p8b0bgfyb)" d="M139.034 133a6.034 6.034 0 1 0 6.034 6.034 6.041 6.041 0 0 0-6.034-6.034zm0 9.722a3.687 3.687 0 1 1 3.687-3.687 3.687 3.687 0 0 1-3.687 3.687z" transform="translate(-127.368 -127.368)"/>
+    <circle cx="1.446" cy="1.446" r="1.446" fill="url(#qopgjia6ic)" transform="translate(16.266 4.231)"/>
+</svg>

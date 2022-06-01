@@ -1,0 +1,84 @@
+body{
+    font-size: 1rem;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.orange-circle{
+    position: absolute;
+    z-index: 1;
+    height: 125vw;
+    background-color: orange;
+    width: 125vw;
+    top: -50vw;
+    left: calc((125vw - 100vw)/2*-1);
+    border-radius: 50%;
+}
+.black-circle{
+    position: absolute;
+    /* z-index: 1; */
+    height: 150vw;
+    background-color: black;
+    width: 150vw;
+    top: -40vw;
+    left: calc((150vw - 100vw)/2*-1);;
+    border-radius: 50%;
+}
+
+button{
+    font-size: 2rem;
+}
+.gyms-text{
+    text-align: center;
+    font-weight: bold;
+    left: 20%;
+    position: absolute;
+    top: 80vw;
+    color: white;
+}
+.spotted-text{
+    text-align: center;
+    font-weight: bold;
+    left: 65%;
+    position: absolute;
+    top: 80vw;
+    color: white;
+}
+
+.profile-pic-container{
+    position: relative;
+    z-index: 2;
+    top: 100px;
+    transform: translateX(37%);
+}
+
+img.profile-pic{
+    width: 25%;
+    height: auto;
+}
+.about-me{
+    padding: 0 8px;
+    position: relative;
+    top: 35%;
+}
+
+div.marble{
+    color: white;
+    padding: 6px;
+    background-color: #e1a00c;
+    border-radius: 4px;
+    margin: 4px 8px 4px 0;
+}
+.friend-pic-container{
+    display: grid;
+    grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
+    flex-wrap: wrap;
+    grid-gap: 8px;
+}
+img.friend-pic{
+    justify-self: center;
+    width: 100px;
+    /* margin: 4px 12px 4px 0; */
+    height: 100px;
+}
