@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<string>com.camsilu.spotter</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -38,6 +38,8 @@
 	<string>802248250711133</string>
 	<key>FacebookDisplayName</key>
 	<string>Example</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<string>0</string>
 	<key>HERECredentials</key>
 	<dict>
 		<key>AccessKeyId</key>
@@ -99,7 +101,5 @@
 	<false/>
 	<key>io.flutter.embedded_views_preview</key>
 	<string>YES</string>
-	<key>FirebaseAppDelegateProxyEnabled</key>
-    <string>0</string>
 </dict>
 </plist>

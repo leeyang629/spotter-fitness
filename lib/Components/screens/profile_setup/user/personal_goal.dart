@@ -12,6 +12,11 @@ class PersonalGoal extends StatefulWidget {
 
 class ComponentState extends State<PersonalGoal> {
   List<String> personalGoals = [];
+  final List<String> entries = <String>['Lose Weight',
+    'Increase Strength', 'Stay Active', 'Boost Endurance',
+    'Improve Flexibility','Tone Muscles'];
+  List<bool> _checkedValues = <bool>[false, false, false, false, false,false];
+  final List<int> colorCodes = <int>[600, 500, 100, 200];
   @override
   void initState() {
     super.initState();
@@ -22,6 +27,73 @@ class ComponentState extends State<PersonalGoal> {
 
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(
+          height: 20,
+        ),
+        Text("What is your personal goal?",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Color.fromRGBO(210, 184, 149, 1),
+                fontSize: 24)),
+        Padding(
+          padding: EdgeInsets.only(top: 12, bottom: 12),
+          child: SizedBox(
+            height: 10,
+            child: Container(
+            ),
+          ),
+        ),
+        Expanded(
+          child:
+          ListView.builder(
+              padding: const EdgeInsets.all(8),
+              itemCount: entries.length,
+              itemBuilder: (BuildContext context, int index) {
+                return
+                  Container(
+                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    margin: EdgeInsets.only(bottom: 10),
+                    child: Row(
+                      children: [
+                        Expanded(
+                            child: Container(
+                              // color: Colors.amber[colorCodes[index]],
+                              child:
+                              Text('${entries[index]}',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: Color.fromRGBO(210, 184, 149, 1)
+                                  )
+                              ),
+                            )
+                        ),
+                        Checkbox(
+                          tristate: true,
+                          value: _checkedValues[index],
+                          shape: CircleBorder(),
+                          side: BorderSide(color: Color.fromRGBO(210, 184, 149, 1)),
+                          onChanged: (bool newValue){
+                            setState(() {
+                              _checkedValues[index] = !_checkedValues[index];
+                            });
+                          },
+                          activeColor: Colors.transparent,
+                        ),  // onChanged: setState()
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                      color: _checkedValues[index]?Color.fromRGBO(210, 184, 149, 0.3):Colors.transparent,
+                      borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                  );
+
+              }
+          ),
+        )
+      ],
+    );
     return SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

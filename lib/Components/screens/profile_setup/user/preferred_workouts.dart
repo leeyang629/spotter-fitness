@@ -76,6 +76,34 @@ class PreferredWorkouts extends StatefulWidget {
 
 class ComponentState extends State<PreferredWorkouts> {
   List<String> selectedWorkouts = [];
+  final List<String> entries = <String>["1:1 Individual Training",
+    "Bodybuilding",
+    "Boxing",
+    "Cardio",
+    "Corrective exercise",
+    "Free Weights",
+    "Flexology",
+    "Glute Building",
+    "Group Training",
+    "Health coaching",
+    "Nutrition",
+    "Personal Training",
+    "Posing",
+    "Rehabilitation & Therapy Services",
+    "Senior Fitness",
+    "Show Prep",
+    "Strength and Conditioning",
+    "Stretching",
+    "Supplement/Smoothie Bar",
+    "Synchronized Swimming",
+    "Youth Fitness",
+    "Weight loss transformation",
+    "Weight Machines",
+    "Yoga"];
+  List<bool> _checkedValues = <bool>[false, false, false, false, false,false,
+    false, false, false, false, false,false,false, false, false, false, false,false,
+    false, false, false, false, false,false];
+
   @override
   void initState() {
     super.initState();
@@ -86,6 +114,73 @@ class ComponentState extends State<PreferredWorkouts> {
 
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(
+          height: 20,
+        ),
+        Text("Choose your favorite topics",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Color.fromRGBO(210, 184, 149, 1),
+              fontSize: 24,)),
+        Padding(
+          padding: EdgeInsets.only(top: 12, bottom: 12),
+          child: SizedBox(
+            height: 10,
+            child: Container(
+            ),
+          ),
+        ),
+        Expanded(
+          child:
+          ListView.builder(
+              padding: const EdgeInsets.all(8),
+              itemCount: entries.length,
+              itemBuilder: (BuildContext context, int index) {
+                return
+                  Container(
+                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    margin: EdgeInsets.only(bottom: 10),
+                    child: Row(
+                      children: [
+                        Expanded(
+                            child: Container(
+                              // color: Colors.amber[colorCodes[index]],
+                              child:
+                              Text('${entries[index]}',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: Color.fromRGBO(210, 184, 149, 1)
+                                  )
+                              ),
+                            )
+                        ),
+                        Checkbox(
+                          tristate: true,
+                          value: _checkedValues[index],
+                          shape: CircleBorder(),
+                          side: BorderSide(color: Color.fromRGBO(210, 184, 149, 1)),
+                          onChanged: (bool newValue){
+                            setState(() {
+                              _checkedValues[index] = !_checkedValues[index];
+                            });
+                          },
+                          activeColor: Colors.transparent,
+                        ),  // onChanged: setState()
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                        color: _checkedValues[index]?Color.fromRGBO(210, 184, 149, 0.3):Colors.transparent,
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                  );
+
+              }
+          ),
+        )
+      ],
+    );
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [

@@ -38,6 +38,7 @@ class Layout extends StatelessWidget {
                 FocusManager.instance.primaryFocus.unfocus();
               },
               child: Container(
+                color: Color.fromRGBO(15, 21, 35, 1),
                 padding: noPadding
                     ? EdgeInsets.all(0)
                     : EdgeInsets.fromLTRB(30.0, 60.0, 30.0, 40.0),
@@ -46,10 +47,20 @@ class Layout extends StatelessWidget {
                   children: [
                     headerVisible == true
                         ? SvgPicture.asset(
-                            "assets/images/spotter_text.svg",
-                            width: 200,
+                            "assets/images/logo_text.svg",
+                            width: 108,
+                            height: 82,
                           )
                         : Container(),
+                    Padding(padding: EdgeInsets.fromLTRB(0, 20.0, 0, 0)),
+                    Text(
+                      "SPOTTER".toUpperCase(),
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Color.fromRGBO(255, 255, 255, 1),
+                          fontSize: 32,
+                          fontWeight: FontWeight.bold),
+                    ),
                     Expanded(
                         child: Container(
                       child: body,

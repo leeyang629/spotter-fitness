@@ -1,6 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:spotter/Components/common/SnackBar.dart';
 import 'package:spotter/Components/screens/layout/LayoutWithUser.dart';
 import 'package:spotter/core/http.dart';
 import 'package:spotter/core/endpoints.dart';
@@ -43,33 +43,135 @@ class ComponentState extends State<VerficationCode> {
   @override
   Widget build(BuildContext context) {
     // FocusScope.of(context).requestFocus(node0);
+    // return Scaffold(
+    //   body: Container(
+    //     height: 200,
+    //     width: double.infinity,
+    //     decoration: BoxDecoration(
+    //       image: DecorationImage(
+    //         image: AssetImage("assets/images/verify_background.png"),
+    //         fit: BoxFit.cover,
+    //       ),
+    //     ),
+    //     child: null /* add child content here */,
+    //   ),
+    // );
     return LayoutWithUser(
       Center(
         child: Stack(children: [
           Container(
             alignment: Alignment.center,
-            color: Colors.white,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/images/verify_background.png"),
+                fit: BoxFit.fill,
+              ),
+            ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Padding(padding: EdgeInsets.only(top: 40.0)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(padding: EdgeInsets.only(left: 10.0)),
+                    Text(
+                      "X",
+                      style: TextStyle(
+                          color: Colors.transparent,
+                          fontSize: 34,
+                          decoration: TextDecoration.none),
+                    ),
+                    Expanded(child:
+                      Text(
+                        "SPOTTER",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 28,
+                            decoration: TextDecoration.none),
+                      )
+                    ),
+                    Text(
+                      "X",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 34,
+                          decoration: TextDecoration.none),
+                    ),
+                    Padding(padding: EdgeInsets.only(right: 10.0))
+                  ],
+                ),
+                Padding(padding: EdgeInsets.only(top: 30.0)),
                 Text(
                   "Verification Code sent to Email",
                   style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 24,
+                      color: Colors.white,
+                      fontSize: 20,
                       decoration: TextDecoration.none),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    _getTextField(value0, first: true),
-                    _getTextField(value1),
-                    _getTextField(value2),
-                    _getTextField(value3),
-                    _getTextField(value4),
-                    _getTextField(value5, last: true)
-                  ],
-                )
+                Padding(padding: EdgeInsets.only(top: 10.0)),
+                Text(
+                  "Please verify your account",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      decoration: TextDecoration.none),
+                ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                //     _getTextField(value0, first: true),
+                //     _getTextField(value1),
+                //     _getTextField(value2),
+                //     _getTextField(value3),
+                //     _getTextField(value4),
+                //     _getTextField(value5, last: true)
+                //   ],
+                // ),
+
+                Padding(
+                    padding: EdgeInsets.fromLTRB(25.0, 30.0, 25.0, 30.0),
+                    child: TextFormField(
+                      textAlignVertical: TextAlignVertical.center,
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
+                      onChanged: (text) {
+                        if (text.length == 6)
+                        {
+                          final persona = Provider.of<AppState>(context, listen: false).userPersona;
+                          if (persona == "user")
+                            Navigator.pushNamed(context,
+                                '/register_user_profile');
+                          else
+                            Navigator.pushNamed(context,
+                                '/register_trainer_profile');
+                        }
+                      },
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                        floatingLabelBehavior: FloatingLabelBehavior.always,
+                        border: InputBorder.none,
+                        filled: true,
+                        fillColor: Color.fromRGBO(255, 255, 255, 0.3),
+                        hintMaxLines: 1,
+                        hintText: 'code',
+                        hintStyle: TextStyle(
+                          color: Colors.white,
+                          fontSize: MediaQuery.of(context).size.width * 0.042,
+                        ),
+                      ),
+                    ),
+                ),
+                Text(
+                  "Send code again (10s)",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      decoration: TextDecoration.none),
+                ),
               ],
             ),
           ),

@@ -235,7 +235,7 @@ class ImageState extends State<CaptureImage> {
   }
 
   Future<Null> _cropImage(XFile imageSelected) async {
-    File croppedFile = await ImageCropper.cropImage(
+    File croppedFile = await ImageCropper().cropImage(
         // cropStyle: CropStyle.circle,
         sourcePath: imageSelected.path,
         aspectRatio: CropAspectRatio(ratioX: 1, ratioY: 1),

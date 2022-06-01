@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:spotter/Components/screens/layout/ProfileLayout.dart';
 import 'package:spotter/Components/screens/profile_setup/common/capture_image.dart';
 import 'package:spotter/Components/screens/profile_setup/common/gender_select.dart';
 import 'package:spotter/Components/screens/profile_setup/common/bottom_section.dart';
@@ -20,7 +21,8 @@ import 'package:flutter_layout_grid/flutter_layout_grid.dart';
 
 class UserProfileSetup extends StatefulWidget {
   final bool update;
-  UserProfileSetup({this.update = false});
+  final bool register;
+  UserProfileSetup({this.update = false, this.register = false});
   @override
   QuestionState createState() => QuestionState();
 }
@@ -45,8 +47,17 @@ class QuestionState extends State<UserProfileSetup> {
   @override
   void initState() {
     super.initState();
-    if (widget.update) {
+    if (widget.update || widget.register) {
       loadOnboardData();
+    }
+    if (widget.register)
+    {
+      onBoardData = {
+        "experience": "",
+        "personalGoals": [],
+        "preferredWorkouts": []
+      };
+      totalPageCount = 4;
     }
   }
 
@@ -97,7 +108,7 @@ class QuestionState extends State<UserProfileSetup> {
 
   @override
   Widget build(BuildContext context) {
-    return Layout(
+    return ProfileLayout(
       LayoutBuilder(builder: (context, constraint) {
         return SingleChildScrollView(
           child: ConstrainedBox(
@@ -130,9 +141,8 @@ class QuestionState extends State<UserProfileSetup> {
                           child: Text(_title(),
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20.0)),
+                                  color: Color.fromRGBO(210, 184, 149, 1),
+                                  fontSize: 24)),
                         )),
                     GridPlacement(
                         columnStart: 0,
@@ -173,42 +183,50 @@ class QuestionState extends State<UserProfileSetup> {
       }),
       headerVisible: false,
       noPadding: index == 5,
+      totalPageCount: totalPageCount,
+      activePageCount: index,
     );
   }
 
   String description() {
-    switch (index) {
-      case 0:
-        return 'To give you a better experience, we need to know your Gender';
-      case 1:
-        return '';
-      case 2:
-        return '';
-      case 3:
-        return "";
-      case 4:
-        return '';
-      default:
-        return 'We want to know more about you. Please follow these next steps to complete the information.';
-    }
+    if(!widget.register)
+      switch (index) {
+        case 0:
+          return 'To give you a better experience, we need to know your Gender';
+        case 1:
+          return '';
+        case 2:
+          return '';
+        case 3:
+          return "";
+        case 4:
+          return '';
+        default:
+          return 'We want to know more about you. Please follow these next steps to complete the information.';
+      }
+    else
+      return '';
   }
 
   String _title() {
-    switch (index) {
-      case 0:
-        return 'Gender';
-      case 1:
-      case 2:
-        return '';
-      case 3:
-        return 'What are your preferred workouts?';
-      case 4:
-        return "Profile Picture";
-      case 5:
-        return '';
-      default:
-        return 'About You';
-    }
+    if(!widget.register)
+      switch (index) {
+        case 0:
+          return 'Gender';
+        case 1:
+        case 2:
+          return '';
+        case 3:
+          return '';
+        case 4:
+          return "Profile Picture";
+        case 5:
+          return '';
+        default:
+          return 'About You';
+      }
+    else
+      return '';
   }
 
   void setGoalsSelected(List<String> value) {
@@ -225,27 +243,47 @@ class QuestionState extends State<UserProfileSetup> {
   }
 
   Widget onBoardingComponent() {
-    switch (index) {
-      case 0:
-        return GenderSelect(gender, changeGender);
-      case 1:
-        return Experience(experience, setExperienceSelected);
-      case 2:
-        return PersonalGoal(setGoalsSelected,
-            savedGoals: onBoardData["personalGoals"]?.cast<String>());
-      case 3:
-        return PreferredWorkouts(
-          updateFavWorkouts,
-          savedWorkouts: onBoardData["preferredWorkouts"]?.cast<String>(),
-        );
-      case 4:
-        return CaptureImage(_image, updateImageFile, null, null);
-      case 5:
-        return Finish(finishedOnboarding,
-            {"data": onBoardData, "organisationPermalink": null});
-      default:
-        return Experience(experience, setExperienceSelected);
-    }
+    if(!widget.register)
+      switch (index) {
+        case 0:
+          return GenderSelect(gender, changeGender);
+        case 1:
+          return Experience(experience, setExperienceSelected);
+        case 2:
+          return PersonalGoal(setGoalsSelected,
+              savedGoals: onBoardData["personalGoals"]?.cast<String>());
+        case 3:
+          return PreferredWorkouts(
+            updateFavWorkouts,
+            savedWorkouts: onBoardData["preferredWorkouts"]?.cast<String>(),
+          );
+        case 4:
+          return CaptureImage(_image, updateImageFile, null, null);
+        case 5:
+          return Finish(finishedOnboarding,
+              {"data": onBoardData, "organisationPermalink": null});
+        default:
+          return Experience(experience, setExperienceSelected);
+      }
+    else
+      switch (index) {
+        case 0:
+          return Experience(experience, setExperienceSelected);
+        case 1:
+          return PersonalGoal(setGoalsSelected,
+              savedGoals: onBoardData["personalGoals"]?.cast<String>());
+        case 2:
+          return PreferredWorkouts(
+            updateFavWorkouts,
+            savedWorkouts: onBoardData["preferredWorkouts"]?.cast<String>(),
+          );
+        case 3:
+          return Finish(finishedOnboarding,
+              {"data": onBoardData, "organisationPermalink": null, "register": widget.register});
+        default:
+          return Experience(experience, setExperienceSelected);
+      }
+
   }
 
   void skipHandler() {

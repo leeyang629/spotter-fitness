@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:pay/pay.dart' as Pay;
 import 'package:spotter/Components/screens/checkout/checkout.dart';
-import 'package:spotter/Components/screens/checkout/server.dart';
 
 class StripeCheckout extends StatefulWidget {
   @override
@@ -34,13 +33,13 @@ class StripeCheckoutState extends State<StripeCheckout> {
               children: [
                 TextButton(
                     onPressed: () async {
-                      final sessionId = await Server().createCheckout("1");
-                      final result = await Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CheckoutPage(
-                                    sessionId: sessionId,
-                                  )));
+                      // final sessionId = await Server().createCheckout("1");
+                      // final result = await Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) => CheckoutPage(
+                      //               sessionId: sessionId,
+                      //             )));
                     },
                     child: Text(
                       'Buy with Card',

@@ -56,8 +56,18 @@ RouteFactory routeConfiguration(BuildContext context) {
           update: true,
         );
         break;
+      case '/register_user_profile':
+        screen = UserProfileSetup(
+          register: true,
+        );
+        break;
       case '/trainer_profile_setup':
         screen = TrainerProfileSetup();
+        break;
+      case '/register_trainer_profile':
+        screen = TrainerProfileSetup(
+          register: true,
+        );
         break;
       case '/update_trainer_profile_setup':
         screen = TrainerProfileSetup(update: true);

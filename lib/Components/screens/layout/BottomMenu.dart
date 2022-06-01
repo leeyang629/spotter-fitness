@@ -16,12 +16,13 @@ class BottomMenu extends StatelessWidget {
           begin: Alignment(0, 1.0),
           end: Alignment(0, -1.0),
           colors: [
-            Color.fromRGBO(216, 150, 20, 1),
-            Color.fromRGBO(251, 200, 78, 1)
+            Color.fromRGBO(15, 21, 35, 1),
+            Color.fromRGBO(15, 21, 35, 1)
           ],
         ),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20))
       ),
-      height: 56,
+      height: 66,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -31,11 +32,16 @@ class BottomMenu extends StatelessWidget {
             },
             child: Padding(
               padding: const EdgeInsets.all(12.0),
-              child: SvgPicture.asset(
-                'assets/images/gym.svg',
-                width: 40,
-                height: 40,
-                color: Colors.black,
+              // child: SvgPicture.asset(
+              //   'assets/images/gym.svg',
+              //   width: 30,
+              //   height: 30,
+              //   color: Colors.black,
+              // ),
+              child: Icon(
+                Icons.location_on_outlined,
+                size: 30,
+                color: Color.fromRGBO(210, 184, 149, 1),
               ),
             ),
           ),
@@ -44,19 +50,25 @@ class BottomMenu extends StatelessWidget {
               Navigator.pushNamed(context, '/schedule');
             },
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(12, 4, 12, 12),
+              padding: const EdgeInsets.all(12.0),
               child: Icon(
-                Icons.calendar_today_outlined,
+                Icons.menu,
                 size: 30,
-                color: Colors.black87,
+                color: Color.fromRGBO(210, 184, 149, 1),
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Icon(
-              Icons.home,
-              size: 24,
+          InkWell(
+            onTap: () {
+              // Navigator.pushNamed(context, '/schedule');
+            },
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(12, 4, 12, 12),
+              child: Icon(
+                Icons.home,
+                size: 30,
+                color: Color.fromRGBO(210, 184, 149, 1),
+              ),
             ),
           ),
           InkWell(
@@ -67,9 +79,9 @@ class BottomMenu extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: Stack(children: [
                 Icon(
-                  Icons.question_answer_outlined,
+                  Icons.message_outlined,
                   size: 30,
-                  // color: Colors.white30,
+                  color: Color.fromRGBO(210, 184, 149, 1),
                 ),
                 if (Provider.of<AppState>(context).newMessage)
                   Positioned(
@@ -97,7 +109,8 @@ class BottomMenu extends StatelessWidget {
                 padding: const EdgeInsets.all(12.0),
                 child: Icon(
                   Icons.account_circle_outlined,
-                  size: 32,
+                  size: 30,
+                  color: Color.fromRGBO(210, 184, 149, 1),
                 )
                 // SvgPicture.asset(
                 //   'assets/images/avatar.svg',

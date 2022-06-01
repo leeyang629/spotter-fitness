@@ -80,3 +80,23 @@ Widget termsAndPolicy(context) => Padding(
                       })
               ])),
     );
+
+Widget UserTypeSelector(context) => Container(
+    padding: EdgeInsets.only(top: 10, bottom: 10),
+    child: RichText(
+      textHeightBehavior: TextHeightBehavior(),
+      textAlign: TextAlign.center,
+      text: TextSpan(
+          text: 'New user? ',
+          style: DefaultTextStyle.of(context).style,
+          children: [
+            TextSpan(
+              style: TextStyle(
+                  decoration: TextDecoration.underline,
+                  color: Color.fromRGBO(175, 136, 8, 1)),
+              text: 'Sign up here',
+              recognizer: TapGestureRecognizer()
+                ..onTap = () => Navigator.pushNamed(context, '/signup'),
+            ),
+          ]),
+    ));

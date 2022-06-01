@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotter/Components/screens/layout/ProfileLayout.dart';
 
 import 'package:spotter/Components/screens/profile_setup/common/set_location.dart';
 import 'package:spotter/Components/screens/profile_setup/trainer/onboarding_questions.dart';
@@ -18,7 +19,8 @@ import "./questions_data.dart";
 
 class TrainerProfileSetup extends StatefulWidget {
   final bool update;
-  TrainerProfileSetup({this.update = false});
+  final bool register;
+  TrainerProfileSetup({this.update = false, this.register = false});
   @override
   OnboardingState createState() => OnboardingState();
 }
@@ -46,9 +48,17 @@ class OnboardingState extends State<TrainerProfileSetup> {
         disableSkipNext = true;
       });
     }
-    if (widget.update) {
+    if (widget.update || widget.register) {
       loadOnboardData();
     }
+    if(widget.register)
+      totalPageCount = 5;
+      setState(() {
+        disableSkipNext = false;
+        setState(() {
+          enableButton = true;
+        });
+      });
   }
 
   loadOnboardData() async {
@@ -105,7 +115,7 @@ class OnboardingState extends State<TrainerProfileSetup> {
   }
 
   Widget build(BuildContext context) {
-    return Layout(
+    return ProfileLayout(
       LayoutBuilder(builder: (context, constraint) {
         return SingleChildScrollView(
             child: ConstrainedBox(
@@ -141,9 +151,8 @@ class OnboardingState extends State<TrainerProfileSetup> {
                           child: Text(_title(),
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20.0)),
+                                  color: Color.fromRGBO(210, 184, 149, 1),
+                                  fontSize: 24)),
                         ),
                       ),
                       GridPlacement(
@@ -185,27 +194,41 @@ class OnboardingState extends State<TrainerProfileSetup> {
       }),
       headerVisible: false,
       noPadding: index == 7,
+      totalPageCount: totalPageCount,
+      activePageCount: index
     );
   }
 
   String _title() {
-    switch (index) {
-      case 0:
-        return 'Share location to be identified';
-      case 1:
-        return 'Gender';
-      case 2:
-      case 3:
-      case 4:
-      case 5:
-        return 'TELL US ABOUT YOU';
-      case 6:
-        return "";
-    }
-    return "";
+    if (!widget.register)
+      switch (index) {
+        case 0:
+          return 'Share location to be identified';
+        case 1:
+          return 'Gender';
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+          return 'Tell us about you';
+        case 6:
+          return "";
+      }
+    else
+      switch (index) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+          return 'Tell us about you';
+        case 4:
+          return "";
+      }
+      return "";
   }
 
   Widget onBoardingComponent() {
+    if (!widget.register)
     switch (index) {
       case 0:
         return SetLocationWrapper(
@@ -224,6 +247,19 @@ class OnboardingState extends State<TrainerProfileSetup> {
       case 7:
         return Finish(finishedOnboarding, buildOnboardingResponse());
     }
+    else
+      switch (index) {
+        case 0:
+          return OnboardingQuestions(4, commonChangeHandler, onBoardData);
+        case 1:
+          return OnboardingQuestions(5, commonChangeHandler, onBoardData);
+        case 2:
+          return OnboardingQuestions(3, commonChangeHandler, onBoardData);
+        case 3:
+          return OnboardingQuestions(2, commonChangeHandler, onBoardData);
+        case 4:
+          Navigator.pushReplacementNamed(context, '/trainer_dashboard');
+      }
     return Container();
   }
 

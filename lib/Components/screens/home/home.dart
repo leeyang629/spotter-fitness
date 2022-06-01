@@ -23,10 +23,11 @@ class HomeState extends State {
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         switch (snapshot.connectionState) {
           case ConnectionState.waiting:
+            goToLoginPage(context);
             return Stack(
               children: [
                 Image.asset(
-                  "assets/images/loading_screen.png",
+                  "assets/images/splash_screen.png",
                   fit: BoxFit.fill,
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height,
@@ -42,13 +43,14 @@ class HomeState extends State {
                 goToLoginPage(context);
                 return Container();
               } else {
-                WidgetsBinding.instance
-                    .addPostFrameCallback((_) => errorDialog(context, () {
-                          setState(() {
-                            response = getUserData(context);
-                          });
-                          Navigator.pop(context);
-                        }, "Error fetching user data"));
+                // WidgetsBinding.instance
+                //     .addPostFrameCallback((_) => errorDialog(context, () {
+                //           setState(() {
+                //             response = getUserData(context);
+                //           });
+                //           Navigator.pop(context);
+                //         }, "Error fetching user data"));
+                goToLoginPage(context);
                 return Container();
               }
             }

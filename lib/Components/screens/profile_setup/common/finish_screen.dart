@@ -26,7 +26,15 @@ class _Onboarding4State extends State<Finish> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(milliseconds: 500), callOnboardApi);
+    if (widget.responseBody["register"]) {
+      setState(() {
+        completed = true;
+      });
+    }
+    else
+    {
+      Future.delayed(Duration(milliseconds: 500), callOnboardApi);
+    }
     _controller =
         AnimationController(vsync: this, duration: Duration(milliseconds: 500));
     _controller.addListener(() {

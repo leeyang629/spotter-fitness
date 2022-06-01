@@ -160,7 +160,8 @@ checkPersona(bool onboarded, BuildContext context) async {
   } else if (onboarded) {
     goToLandingScreen(persona, context);
   } else if (!onboarded) {
-    goToOnboarding(persona, context);
+    goToLandingScreen(persona, context);
+    // goToOnboarding(persona, context);
   }
 }
 

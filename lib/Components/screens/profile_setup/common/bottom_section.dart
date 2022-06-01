@@ -26,7 +26,7 @@ List<Widget> _progressStrip(
   if (index < totalPageCount - 1) {
     return [
       _skip(skipHandler, disableSkipNext),
-      _progress(index, totalPageCount),
+      // _progress(index, totalPageCount),
       _next(nextHandler, disableSkipNext)
     ];
   } else if (index == totalPageCount - 1) {
@@ -54,16 +54,31 @@ Widget _skip(Function skipHandler, bool disableSkipNext) => TextButton(
     child: Text('SKIP',
         style: TextStyle(
             fontSize: 16,
-            color: disableSkipNext ? Colors.grey : Colors.black,
-            fontWeight: FontWeight.bold)));
+            color: disableSkipNext ? Colors.white : Colors.white,
+            fontWeight: FontWeight.bold)
+    ),
+    style: ButtonStyle(
+      padding: MaterialStateProperty.all<EdgeInsets>(
+          EdgeInsets.fromLTRB(28,10,28,10)),
+    )
+);
 
 Widget _next(Function nextHandler, bool disableSkipNext) => TextButton(
     onPressed: disableSkipNext ? null : nextHandler,
     child: Text('NEXT',
         style: TextStyle(
             fontSize: 16,
-            color: disableSkipNext ? Colors.grey : Colors.black,
-            fontWeight: FontWeight.bold)));
+            color: disableSkipNext ? Colors.white : Colors.white,
+            fontWeight: FontWeight.bold,
+        )
+    ),
+    style: ButtonStyle(
+      backgroundColor:
+      MaterialStateProperty.all<Color>(Color.fromRGBO(210, 184, 149, 1)),
+      padding: MaterialStateProperty.all<EdgeInsets>(
+          EdgeInsets.fromLTRB(28,10,28,10)),
+    )
+);
 
 Widget finish(bool enableFinishBtn, Function finishiHandler) => ElevatedButton(
     style: ButtonStyle(

@@ -25,19 +25,26 @@ class ComponentState extends State<GenderSelect> {
           Text(
             "MALE",
             textAlign: TextAlign.center,
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Color.fromRGBO(210, 184, 149, 1),
+                fontSize: 16),
           ),
           genderComponent("female", "assets/images/female_new.svg"),
           Text(
             "FEMALE",
             textAlign: TextAlign.center,
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Color.fromRGBO(210, 184, 149, 1),
+                fontSize: 16),
           ),
           genderComponent("none", "assets/images/no_gender.svg"),
           Text(
             "OTHER",
             textAlign: TextAlign.center,
-            style: TextStyle(fontWeight: FontWeight.bold),
+
+            style: TextStyle(
+                color: Color.fromRGBO(210, 184, 149, 1),
+                fontSize: 16),
           ),
         ],
       ),

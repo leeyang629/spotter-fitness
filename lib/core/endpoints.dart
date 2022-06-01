@@ -25,9 +25,18 @@ ApiEndPoints developmentApiUrls = ApiEndPoints(
 
 ApiEndPoints productionApiUrls = ApiEndPoints(
     location: "https://location-service-production.spotter-api.com/",
-    user: "https://user-service-production.spotter-api.com",
+    user: "https://spotter-user.herokuapp.com",
     googlePlaceAuto:
         "https://maps.googleapis.com/maps/api/place/autocomplete/json",
     googlePlaceDetail:
         "https://maps.googleapis.com/maps/api/place/details/json",
+    company: "https://company-service-production.spotter-api.com");
+
+ApiEndPoints localApiUrls = ApiEndPoints(
+    location: "https://spotter-user.herokuapp.com",
+    user: "https://spotter-user.herokuapp.com",
+    googlePlaceAuto:
+    "https://maps.googleapis.com/maps/api/place/autocomplete/json",
+    googlePlaceDetail:
+    "https://maps.googleapis.com/maps/api/place/details/json",
     company: "https://company-service-production.spotter-api.com");

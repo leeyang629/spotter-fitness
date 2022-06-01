@@ -3,7 +3,6 @@ import 'package:geolocator/geolocator.dart';
 import 'package:provider/provider.dart';
 import 'package:spotter/Components/screens/checkout/checkout.dart';
 import 'package:spotter/Components/screens/checkout/flutter_checkout.dart';
-import 'package:spotter/Components/screens/checkout/server.dart';
 import 'package:spotter/Components/screens/layout/LayoutWithUser.dart';
 import 'package:spotter/Components/screens/trainers_list/model.dart';
 import 'package:spotter/core/endpoints.dart';
@@ -159,42 +158,42 @@ class _TrainersListState extends State<TrainersList> {
   }
 
   Future fetchTrainers() async {
-    if (!fetching) {
-      if (mounted) {
-        setState(() {
-          fetching = true;
-          error = false;
-        });
-        Provider.of<AppState>(context, listen: false).enableSpinner();
-      }
-      Position location = await getPermission();
-      final api = HttpClient(productionApiUrls.user);
-      try {
-        final result = await api.get(
-            "/api/v1/users/search_trainers?search_range=${Provider.of<AppState>(context, listen: false).radius * 1609}&latitude=${location.latitude}&longitude=${location.longitude}&page=$page&per_page=$perPage",
-            withAuthHeaders: true);
-        Provider.of<AppState>(context, listen: false).disableSpinner();
-        // print(result);
-        List<String> userPreferences =
-            Provider.of<AppState>(context, listen: false)
-                .onBoardData
-                .preferredWorkouts;
-        final trainersList =
-            TrainerData.parseTrainers(result["trainers"], userPreferences);
-        setState(() {
-          hasMore = (result["total_page"] ?? 0) > page ? true : false;
-          trainers.addAll(trainersList);
-          page = (result["total_page"] ?? 0) > page ? page + 1 : page;
-          fetching = false;
-        });
-      } catch (e) {
-        Provider.of<AppState>(context, listen: false).disableSpinner();
-        print(e);
-        setState(() {
-          error = true;
-          fetching = false;
-        });
-      }
-    }
+    // if (!fetching) {
+    //   if (mounted) {
+    //     setState(() {
+    //       fetching = true;
+    //       error = false;
+    //     });
+    //     Provider.of<AppState>(context, listen: false).enableSpinner();
+    //   }
+    //   Position location = await getPermission();
+    //   final api = HttpClient(productionApiUrls.user);
+    //   try {
+    //     final result = await api.get(
+    //         "/api/v1/users/search_trainers?search_range=${Provider.of<AppState>(context, listen: false).radius * 1609}&latitude=${location.latitude}&longitude=${location.longitude}&page=$page&per_page=$perPage",
+    //         withAuthHeaders: true);
+    //     Provider.of<AppState>(context, listen: false).disableSpinner();
+    //     // print(result);
+    //     List<String> userPreferences =
+    //         Provider.of<AppState>(context, listen: false)
+    //             .onBoardData
+    //             .preferredWorkouts;
+    //     final trainersList =
+    //         TrainerData.parseTrainers(result["trainers"], userPreferences);
+    //     setState(() {
+    //       hasMore = (result["total_page"] ?? 0) > page ? true : false;
+    //       trainers.addAll(trainersList);
+    //       page = (result["total_page"] ?? 0) > page ? page + 1 : page;
+    //       fetching = false;
+    //     });
+    //   } catch (e) {
+    //     Provider.of<AppState>(context, listen: false).disableSpinner();
+    //     print(e);
+    //     setState(() {
+    //       error = true;
+    //       fetching = false;
+    //     });
+    //   }
+    // }
   }
 }

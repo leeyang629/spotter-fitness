@@ -33,14 +33,23 @@ class DropDownState extends State<QuestionWithDropDown> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(widget.text,
-              style: TextStyle(color: Color.fromRGBO(176, 182, 186, 1))),
-          DropdownButton<String>(
+              style: TextStyle(
+                color: Color.fromRGBO(210, 184, 149, 1)
+                )
+          ),
+          Padding(padding: EdgeInsets.only(top: 10)),
+          DropdownButtonFormField<String>(
             key: ObjectKey(widget.keyvalue),
             value: dropDownValue,
             elevation: 16,
-            underline: Container(
-              height: 2,
-              color: Colors.black,
+            decoration: InputDecoration(
+              fillColor: Color.fromRGBO(210, 184, 149, 0.2),
+              filled: true,
+              border: new OutlineInputBorder(
+                borderRadius: const BorderRadius.all(
+                  const Radius.circular(10.0),
+                ),
+              ),
             ),
             onChanged: (String value) {
               setState(() {
@@ -53,7 +62,7 @@ class DropDownState extends State<QuestionWithDropDown> {
                   value: value,
                   child: LayoutBuilder(
                     builder: (context, constraints) => Container(
-                      width: MediaQuery.of(context).size.width - 84,
+                      width: MediaQuery.of(context).size.width/2,
                       child: Text(value),
                     ),
                   ));
@@ -94,7 +103,8 @@ class RadioButtonState extends State<QuestionWithRadioBtn> {
       margin: EdgeInsets.only(bottom: 20),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(widget.text,
-            style: TextStyle(color: Color.fromRGBO(176, 182, 186, 1))),
+            style: TextStyle(
+                color: Color.fromRGBO(210, 184, 149, 1))),
         widget.axis == "horizontal"
             ? Row(
                 children: widget.values
@@ -116,7 +126,8 @@ class RadioButtonState extends State<QuestionWithRadioBtn> {
   Widget listTile(value) {
     return RadioListTile<String>(
       contentPadding: EdgeInsets.all(0),
-      title: Text(value, style: TextStyle(fontSize: 14)),
+      title: Text(value, style: TextStyle(fontSize: 14,
+          color: Color.fromRGBO(210, 184, 149, 1))),
       toggleable: true,
       activeColor: Color.fromRGBO(247, 165, 4, 1),
       value: value,
@@ -160,7 +171,8 @@ class RadioButtonAndTextState extends State<QuestionWithRadioBtnAndText> {
       margin: EdgeInsets.only(bottom: 20),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(widget.text,
-            style: TextStyle(color: Color.fromRGBO(176, 182, 186, 1))),
+            style: TextStyle(
+              color: Color.fromRGBO(210, 184, 149, 1),)),
         widget.axis == "horizontal"
             ? Row(
                 children: widget.values
@@ -184,9 +196,10 @@ class RadioButtonAndTextState extends State<QuestionWithRadioBtnAndText> {
           height: 36,
           child: RadioListTile<String>(
             contentPadding: EdgeInsets.all(0),
-            title: Text(value, style: TextStyle(fontSize: 14)),
+            title: Text(value, style: TextStyle(fontSize: 14,
+              color: Color.fromRGBO(210, 184, 149, 1),)),
             toggleable: true,
-            activeColor: Color.fromRGBO(247, 165, 4, 1),
+            activeColor: Color.fromRGBO(210, 184, 149, 1),
             value: value,
             groupValue:
                 selectedValue.keys.toList().indexOf(value) > -1 ? value : "",
@@ -250,17 +263,30 @@ class TextQuestionState extends State<QuestionWithText> {
     return Container(
         margin: EdgeInsets.only(bottom: 20),
         child:
-            Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-          Text(widget.text,
-              style: TextStyle(color: Color.fromRGBO(176, 182, 186, 1))),
-          TextField(
-            maxLines: widget.maxLines,
-            controller: textValue,
-            onChanged: (String value) {
-              widget.changeHandler(value);
-            },
+          Column(crossAxisAlignment: CrossAxisAlignment.stretch, 
+              children: [
+                Text(widget.text,
+                    style: TextStyle(color: Color.fromRGBO(210, 184, 149, 1))),
+                Padding(padding: EdgeInsets.only(top: 10)),
+                TextField(
+                  maxLines: widget.maxLines,
+                  controller: textValue,
+                  onChanged: (String value) {
+                    widget.changeHandler(value);
+                  },
+                  decoration: InputDecoration(
+                      fillColor: Color.fromRGBO(210, 184, 149, 0.2),
+                      filled: true,
+                      border: new OutlineInputBorder(
+                        borderRadius: const BorderRadius.all(
+                          const Radius.circular(10.0),
+                        ),
+                      ),
+                  )
+                )
+              ]
           )
-        ]));
+    );
   }
 }
 
@@ -295,7 +321,9 @@ class StripSelectState extends State<QuestionWithStripSelect> {
         child:
             Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           Text(widget.text,
-              style: TextStyle(color: Color.fromRGBO(176, 182, 186, 1))),
+              style: TextStyle(
+                color: Color.fromRGBO(210, 184, 149, 1),)),
+          Padding(padding: EdgeInsets.only(top: 10.0)),
           Wrap(
               spacing: 5,
               runSpacing: 0,

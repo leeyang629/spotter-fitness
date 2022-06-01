@@ -70,8 +70,8 @@ class MenuState extends State<LayoutWithUser> with TickerProviderStateMixin {
                         ]),
                       )),
             ),
-            if (widget.bottomMenu) SpotBackground(),
-            if (widget.bottomMenu) Spot(),
+            // if (widget.bottomMenu) SpotBackground(),
+            // if (widget.bottomMenu) Spot(),
             // Background click handler to close menu
             if (menuState == 'open')
               GestureDetector(

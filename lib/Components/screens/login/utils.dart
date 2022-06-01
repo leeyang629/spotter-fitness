@@ -78,7 +78,7 @@ class LoginUtil {
   }
 
   Future signIn(String username, String password) async {
-    final apiCall = HttpClient(productionApiUrls.user);
+    final apiCall = HttpClient(localApiUrls.user);
     final result = await apiCall
         .post('/api/v1/users/login?username=$username&password=$password', {});
     print(result);
